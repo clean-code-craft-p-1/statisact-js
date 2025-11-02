@@ -3,11 +3,11 @@ import {expect} from 'chai';
 
 describe('Statistics', () => {
     it('reports average, min, max', () => {
-        const computedStats = computeStatistics([1.5, 8.9, 3.2, 4.5]);
+        const computedStats = computeStatistics([98.6, 98.2, 97.8, 102.2]);
         const epsilon = 0.001;
-        expect(computedStats.average).to.be.closeTo(4.525, epsilon);
-        expect(computedStats.min).to.be.closeTo(1.5, epsilon);
-        expect(computedStats.max).to.be.closeTo(8.9, epsilon);
+        expect(computedStats.average).to.be.closeTo(99.2, epsilon);
+        expect(computedStats.min).to.be.closeTo(97.8, epsilon);
+        expect(computedStats.max).to.be.closeTo(102.2, epsilon);
     });
     it('reports NaN for empty input', () => {
         const computedStats = computeStatistics([]);
